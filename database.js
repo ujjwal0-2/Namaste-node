@@ -18,12 +18,13 @@ async function main() {
   const collection = db.collection('documents');
 
   // the following code examples can be pasted here...
+  const findResult = await collection.find({}).toArray();
+console.log('Found documents =>', findResult);
 
   return 'done.';
 }
 
-const findResult = await collection.find({}).toArray();
-console.log('Found documents =>', findResult);
+
 
 main()
   .then(console.log)
