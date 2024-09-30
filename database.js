@@ -22,6 +22,9 @@ async function main() {
   return 'done.';
 }
 
+const findResult = await collection.find({}).toArray();
+console.log('Found documents =>', findResult);
+
 main()
   .then(console.log)
   .catch(console.error)
